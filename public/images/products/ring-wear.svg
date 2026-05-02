@@ -1,0 +1,6 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" fill="#d9f99d"/>
+  <rect x="150" y="190" width="500" height="320" rx="40" fill="#3f6212" opacity="0.9"/>
+  <circle cx="560" cy="340" r="95" fill="#f7fee7" opacity="0.3"/>
+  <text x="400" y="700" text-anchor="middle" fill="#3f6212" font-size="40" font-family="system-ui,sans-serif">试戴示意 · 戒指</text>
+</svg>

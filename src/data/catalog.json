@@ -1,0 +1,790 @@
+[
+  {
+    "slug": "p-01",
+    "folderId": "产品_01",
+    "name": "南玉甄选 · 产品_01",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 416,
+    "category": "gift",
+    "meaning": "peace",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-01-0.jpg",
+    "gallery": [
+      "/images/catalog/p-01-0.jpg",
+      "/images/catalog/p-01-1.jpg",
+      "/images/catalog/p-01-2.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_01",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-02",
+    "folderId": "产品_02",
+    "name": "南玉甄选 · 产品_02",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 513,
+    "category": "daily",
+    "meaning": "career",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-02-0.jpg",
+    "gallery": [
+      "/images/catalog/p-02-0.jpg",
+      "/images/catalog/p-02-1.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_02",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-03",
+    "folderId": "产品_03",
+    "name": "南玉甄选 · 产品_03",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 610,
+    "category": "collection",
+    "meaning": "love",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-03-0.jpg",
+    "gallery": [
+      "/images/catalog/p-03-0.jpg",
+      "/images/catalog/p-03-1.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_03",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-04",
+    "folderId": "产品_04",
+    "name": "南玉甄选 · 产品_04",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 656,
+    "category": "gift",
+    "meaning": "health",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-04-0.jpg",
+    "gallery": [
+      "/images/catalog/p-04-0.jpg",
+      "/images/catalog/p-04-1.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_04",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-05",
+    "folderId": "产品_05",
+    "name": "南玉甄选 · 产品_05",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 787,
+    "category": "daily",
+    "meaning": "peace",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-05-0.jpg",
+    "gallery": [
+      "/images/catalog/p-05-0.jpg",
+      "/images/catalog/p-05-1.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_05",
+      "支持图文详情与售后咨询",
+      "3D：单图法线重建浮雕 GLB（由 model-viewer 渲染）"
+    ],
+    "modelGlb": "/models/p-05.glb",
+    "preview3dMode": "glb"
+  },
+  {
+    "slug": "p-06",
+    "folderId": "产品_06",
+    "name": "南玉甄选 · 产品_06",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 867,
+    "category": "collection",
+    "meaning": "career",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-06-0.jpg",
+    "gallery": [
+      "/images/catalog/p-06-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_06",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-07",
+    "folderId": "产品_07",
+    "name": "南玉甄选 · 产品_07",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 896,
+    "category": "gift",
+    "meaning": "love",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-07-0.jpg",
+    "gallery": [
+      "/images/catalog/p-07-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_07",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-08",
+    "folderId": "产品_08",
+    "name": "南玉甄选 · 产品_08",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 416,
+    "category": "daily",
+    "meaning": "health",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-08-0.jpg",
+    "gallery": [
+      "/images/catalog/p-08-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_08",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-09",
+    "folderId": "产品_09",
+    "name": "南玉甄选 · 产品_09",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 530,
+    "category": "collection",
+    "meaning": "peace",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-09-0.jpg",
+    "gallery": [
+      "/images/catalog/p-09-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_09",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-10",
+    "folderId": "产品_10",
+    "name": "南玉甄选 · 产品_10",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 576,
+    "category": "gift",
+    "meaning": "career",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-10-0.jpg",
+    "gallery": [
+      "/images/catalog/p-10-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_10",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-11",
+    "folderId": "产品_11",
+    "name": "南玉甄选 · 产品_11",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 639,
+    "category": "daily",
+    "meaning": "love",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-11-0.jpg",
+    "gallery": [
+      "/images/catalog/p-11-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_11",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-12",
+    "folderId": "产品_12",
+    "name": "南玉甄选 · 产品_12",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 787,
+    "category": "collection",
+    "meaning": "health",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-12-0.jpg",
+    "gallery": [
+      "/images/catalog/p-12-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_12",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-13",
+    "folderId": "产品_13",
+    "name": "南玉甄选 · 产品_13",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 850,
+    "category": "gift",
+    "meaning": "peace",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-13-0.jpg",
+    "gallery": [
+      "/images/catalog/p-13-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_13",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-14",
+    "folderId": "产品_14",
+    "name": "南玉甄选 · 产品_14",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 947,
+    "category": "daily",
+    "meaning": "career",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-14-0.jpg",
+    "gallery": [
+      "/images/catalog/p-14-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_14",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-15",
+    "folderId": "产品_15",
+    "name": "南玉甄选 · 产品_15",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 416,
+    "category": "collection",
+    "meaning": "love",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-15-0.jpg",
+    "gallery": [
+      "/images/catalog/p-15-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_15",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-16",
+    "folderId": "产品_16",
+    "name": "南玉甄选 · 产品_16",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 513,
+    "category": "gift",
+    "meaning": "health",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-16-0.jpg",
+    "gallery": [
+      "/images/catalog/p-16-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_16",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-17",
+    "folderId": "产品_17",
+    "name": "南玉甄选 · 产品_17",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 610,
+    "category": "daily",
+    "meaning": "peace",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-17-0.jpg",
+    "gallery": [
+      "/images/catalog/p-17-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_17",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-18",
+    "folderId": "产品_18",
+    "name": "南玉甄选 · 产品_18",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 639,
+    "category": "collection",
+    "meaning": "career",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-18-0.jpg",
+    "gallery": [
+      "/images/catalog/p-18-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_18",
+      "支持图文详情与售后咨询",
+      "3D：单图法线重建浮雕 GLB（由 model-viewer 渲染）"
+    ],
+    "modelGlb": "/models/p-18.glb",
+    "preview3dMode": "glb"
+  },
+  {
+    "slug": "p-19",
+    "folderId": "产品_19",
+    "name": "南玉甄选 · 产品_19",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 787,
+    "category": "gift",
+    "meaning": "love",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-19-0.jpg",
+    "gallery": [
+      "/images/catalog/p-19-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_19",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-20",
+    "folderId": "产品_20",
+    "name": "南玉甄选 · 产品_20",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 833,
+    "category": "daily",
+    "meaning": "health",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-20-0.jpg",
+    "gallery": [
+      "/images/catalog/p-20-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_20",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-21",
+    "folderId": "产品_21",
+    "name": "南玉甄选 · 产品_21",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 879,
+    "category": "collection",
+    "meaning": "peace",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-21-0.jpg",
+    "gallery": [
+      "/images/catalog/p-21-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_21",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-22",
+    "folderId": "产品_22",
+    "name": "南玉甄选 · 产品_22",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 399,
+    "category": "gift",
+    "meaning": "career",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-22-0.jpg",
+    "gallery": [
+      "/images/catalog/p-22-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_22",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-23",
+    "folderId": "产品_23",
+    "name": "南玉甄选 · 产品_23",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 530,
+    "category": "daily",
+    "meaning": "love",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-23-0.jpg",
+    "gallery": [
+      "/images/catalog/p-23-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_23",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-24",
+    "folderId": "产品_24",
+    "name": "南玉甄选 · 产品_24",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 627,
+    "category": "collection",
+    "meaning": "health",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-24-0.jpg",
+    "gallery": [
+      "/images/catalog/p-24-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_24",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-25",
+    "folderId": "产品_25",
+    "name": "南玉甄选 · 产品_25",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 639,
+    "category": "gift",
+    "meaning": "peace",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-25-0.jpg",
+    "gallery": [
+      "/images/catalog/p-25-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_25",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-26",
+    "folderId": "产品_26",
+    "name": "南玉甄选 · 产品_26",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 719,
+    "category": "daily",
+    "meaning": "career",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-26-0.jpg",
+    "gallery": [
+      "/images/catalog/p-26-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_26",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-27",
+    "folderId": "产品_27",
+    "name": "南玉甄选 · 产品_27",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 816,
+    "category": "collection",
+    "meaning": "love",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-27-0.jpg",
+    "gallery": [
+      "/images/catalog/p-27-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_27",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-28",
+    "folderId": "产品_28",
+    "name": "南玉甄选 · 产品_28",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 896,
+    "category": "gift",
+    "meaning": "health",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-28-0.jpg",
+    "gallery": [
+      "/images/catalog/p-28-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_28",
+      "支持图文详情与售后咨询",
+      "3D：单图法线重建浮雕 GLB（由 model-viewer 渲染）"
+    ],
+    "modelGlb": "/models/p-28.glb",
+    "preview3dMode": "glb"
+  },
+  {
+    "slug": "p-29",
+    "folderId": "产品_29",
+    "name": "南玉甄选 · 产品_29",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 399,
+    "category": "daily",
+    "meaning": "peace",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-29-0.jpg",
+    "gallery": [
+      "/images/catalog/p-29-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_29",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "p-30",
+    "folderId": "产品_30",
+    "name": "南玉甄选 · 产品_30",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 530,
+    "category": "collection",
+    "meaning": "career",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/p-30-0.jpg",
+    "gallery": [
+      "/images/catalog/p-30-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：产品_30",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "d-01",
+    "folderId": "仅设计稿_01",
+    "name": "南玉甄选 · 仅设计稿_01",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 593,
+    "category": "gift",
+    "meaning": "love",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/d-01-0.jpg",
+    "gallery": [
+      "/images/catalog/d-01-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：仅设计稿_01",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "d-02",
+    "folderId": "仅设计稿_02",
+    "name": "南玉甄选 · 仅设计稿_02",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 690,
+    "category": "daily",
+    "meaning": "health",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/d-02-0.jpg",
+    "gallery": [
+      "/images/catalog/d-02-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：仅设计稿_02",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "d-03",
+    "folderId": "仅设计稿_03",
+    "name": "南玉甄选 · 仅设计稿_03",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 770,
+    "category": "collection",
+    "meaning": "peace",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/d-03-0.jpg",
+    "gallery": [
+      "/images/catalog/d-03-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：仅设计稿_03",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  },
+  {
+    "slug": "d-04",
+    "folderId": "仅设计稿_04",
+    "name": "南玉甄选 · 仅设计稿_04",
+    "tagline": "实物素材入库，价格与规格以详情页为准。",
+    "priceCny": 799,
+    "category": "gift",
+    "meaning": "career",
+    "material": "天然玉石 / 镶嵌件以详情为准",
+    "size": "详见商品页尺寸表",
+    "weight": "以质检标称与详情页为准",
+    "image": "/images/catalog/d-04-0.jpg",
+    "gallery": [
+      "/images/catalog/d-04-0.jpg"
+    ],
+    "highlights": [
+      "素材来源：仅设计稿_04",
+      "支持图文详情与售后咨询",
+      "支持后续绑定 GLB 三维展示"
+    ],
+    "modelGlb": null,
+    "preview3dMode": null
+  }
+]
