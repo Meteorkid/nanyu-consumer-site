@@ -5,6 +5,8 @@ import { SiteFooter } from "@/components/site-footer";
 import { AnalyticsScript } from "@/components/analytics-script";
 import { CartProvider } from "@/lib/cart";
 import { LocaleProvider } from "@/lib/locale";
+import { AuthProvider } from "@/lib/auth";
+import { OrdersProvider } from "@/lib/orders";
 
 /** 静态包本地预览默认与根目录「启动南玉网站」脚本端口一致 */
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://127.0.0.1:8787";
@@ -40,12 +42,16 @@ export default function RootLayout({
     <html lang="zh-CN" className="h-full antialiased">
       <body className="min-h-full bg-zinc-100 text-zinc-950">
         <LocaleProvider>
-          <CartProvider>
-            <AnalyticsScript />
-            <SiteHeader />
-            <main className="flex-1">{children}</main>
-            <SiteFooter />
-          </CartProvider>
+          <AuthProvider>
+            <OrdersProvider>
+              <CartProvider>
+                <AnalyticsScript />
+                <SiteHeader />
+                <main className="flex-1">{children}</main>
+                <SiteFooter />
+              </CartProvider>
+            </OrdersProvider>
+          </AuthProvider>
         </LocaleProvider>
       </body>
     </html>

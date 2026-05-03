@@ -5,12 +5,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "@/lib/locale";
 import { useCart, useCartActions } from "@/lib/cart";
+import { useOrders } from "@/lib/orders";
+import { useAuth } from "@/lib/auth";
 
 export default function CheckoutPage() {
   const t = useTranslations("checkout");
   const { state } = useCart();
   const { clearCart } = useCartActions();
-  const [orderPlaced, setOrderPlaced] = useState(false);
+  const { createOrder } = useOrders();
+  const { user } = useAuth();
+  const [orderId, setOrderId] = useState<string | null>(null);
   const [paymentMethod, setPaymentMethod] = useState<"creditCard" | "alipay" | "wechatPay">("creditCard");
 
   const [form, setForm] = useState({
@@ -28,11 +32,33 @@ export default function CheckoutPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setOrderPlaced(true);
+
+    const paymentLabels: Record<string, string> = {
+      creditCard: "信用卡",
+      alipay: "支付宝",
+      wechatPay: "微信支付",
+    };
+
+    const order = createOrder({
+      items: state.items,
+      total: state.total,
+      paymentMethod: paymentLabels[paymentMethod] || paymentMethod,
+      address: {
+        name: form.name,
+        phone: form.phone,
+        address: form.address,
+        city: form.city,
+        postalCode: form.postalCode,
+        country: form.country,
+      },
+      userId: user?.id,
+    });
+
+    setOrderId(order.id);
     clearCart();
   };
 
-  if (state.items.length === 0 && !orderPlaced) {
+  if (state.items.length === 0 && !orderId) {
     return (
       <div className="section-shell">
         <h1 className="section-title">{t("title")}</h1>
@@ -49,7 +75,7 @@ export default function CheckoutPage() {
     );
   }
 
-  if (orderPlaced) {
+  if (orderId) {
     return (
       <div className="section-shell">
         <div className="mx-auto max-w-lg rounded-2xl border border-zinc-200 bg-white p-8 text-center shadow-sm">
@@ -60,18 +86,21 @@ export default function CheckoutPage() {
           </div>
           <h1 className="mt-4 text-2xl font-semibold text-zinc-900">{t("orderPlaced")}</h1>
           <p className="mt-2 text-sm text-zinc-600">{t("orderPlacedDescription")}</p>
+          <p className="mt-2 text-sm text-zinc-500">
+            订单号：<span className="font-mono font-medium text-zinc-900">{orderId}</span>
+          </p>
           <div className="mt-6 flex justify-center gap-3">
             <Link
-              href="/shop"
+              href={`/orders/${orderId}`}
               className="rounded-full bg-amber-600 px-5 py-2 text-sm font-medium text-white hover:bg-amber-700"
             >
-              继续购物
+              查看订单
             </Link>
             <Link
-              href="/"
+              href="/shop"
               className="rounded-full border border-zinc-300 px-5 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-50"
             >
-              返回首页
+              继续购物
             </Link>
           </div>
         </div>

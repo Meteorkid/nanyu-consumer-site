@@ -3,6 +3,7 @@ import { FavoritesCounter } from "@/components/favorites-counter";
 import { CartButton } from "@/components/cart-button";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { MobileMenu } from "@/components/mobile-menu";
+import { UserMenu } from "@/components/user-menu";
 import { navItems } from "@/lib/site-data";
 
 export function SiteHeader() {
@@ -22,6 +23,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <FavoritesCounter />
           <CartButton />
+          <UserMenu />
           <LanguageSwitcher />
           <MobileMenu />
         </div>
