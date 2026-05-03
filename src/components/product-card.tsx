@@ -2,6 +2,7 @@ import Image from "next/image";
 import { categoryLabel, meaningLabel, Product } from "@/lib/site-data";
 import { TrackLink } from "@/components/track-link";
 import { FavoriteButton } from "@/components/favorite-button";
+import { AddToCartButton } from "@/components/add-to-cart-button";
 
 type ProductCardProps = {
   product: Product;
@@ -36,14 +37,17 @@ export function ProductCard({ product }: ProductCardProps) {
         <p className="line-clamp-2 text-sm text-zinc-600">{product.tagline}</p>
         <p className="text-[11px] text-zinc-500">寓意：{meaningLabel[product.meaning]}</p>
         <p className="mt-auto text-base font-semibold text-zinc-900">¥{product.priceCny}</p>
-        <TrackLink
-          href={`/product/${product.slug}`}
-          className="inline-flex rounded-full bg-amber-600 px-4 py-2 text-sm font-medium text-white hover:bg-amber-700"
-          eventName="view_product_detail"
-          eventPayload={{ product_slug: product.slug }}
-        >
-          查看详情
-        </TrackLink>
+        <div className="flex gap-2">
+          <TrackLink
+            href={`/product/${product.slug}`}
+            className="inline-flex flex-1 items-center justify-center rounded-full bg-amber-600 px-4 py-2 text-sm font-medium text-white hover:bg-amber-700"
+            eventName="view_product_detail"
+            eventPayload={{ product_slug: product.slug }}
+          >
+            查看详情
+          </TrackLink>
+          <AddToCartButton product={product} />
+        </div>
       </div>
     </article>
   );

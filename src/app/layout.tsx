@@ -3,6 +3,8 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { AnalyticsScript } from "@/components/analytics-script";
+import { CartProvider } from "@/lib/cart";
+import { LocaleProvider } from "@/lib/locale";
 
 /** 静态包本地预览默认与根目录「启动南玉网站」脚本端口一致 */
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://127.0.0.1:8787";
@@ -37,10 +39,14 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" className="h-full antialiased">
       <body className="min-h-full bg-zinc-100 text-zinc-950">
-        <AnalyticsScript />
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
+        <LocaleProvider>
+          <CartProvider>
+            <AnalyticsScript />
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+            <SiteFooter />
+          </CartProvider>
+        </LocaleProvider>
       </body>
     </html>
   );

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { FavoritesCounter } from "@/components/favorites-counter";
+import { CartButton } from "@/components/cart-button";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { MobileMenu } from "@/components/mobile-menu";
 import { navItems } from "@/lib/site-data";
 
@@ -19,9 +21,8 @@ export function SiteHeader() {
         </nav>
         <div className="flex items-center gap-2">
           <FavoritesCounter />
-          <span className="hidden rounded-full bg-zinc-100 px-3 py-1 text-xs text-zinc-600 md:inline-flex">
-            中文 | EN
-          </span>
+          <CartButton />
+          <LanguageSwitcher />
           <MobileMenu />
         </div>
       </div>

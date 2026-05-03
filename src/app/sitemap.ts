@@ -1,6 +1,8 @@
 import { MetadataRoute } from "next";
 import { products, articles } from "@/lib/site-data";
 
+export const dynamic = "force-static";
+
 const baseUrl = "https://yurucheng.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
