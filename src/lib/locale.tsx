@@ -61,25 +61,29 @@ export function useLocale() {
   return context;
 }
 
+function resolveKey(messages: Record<string, unknown>, fullKey: string): unknown {
+  const keys = fullKey.split(".");
+  let result: unknown = messages;
+  for (const k of keys) {
+    if (result && typeof result === "object" && k in result) {
+      result = (result as Record<string, unknown>)[k];
+    } else {
+      return undefined;
+    }
+  }
+  return result;
+}
+
 /**
- * 获取翻译文本的 hook
+ * 获取翻译文本的 hook（返回 string）
  * 支持嵌套 key，如 "common.shop"
  */
 export function useTranslations(namespace?: string) {
-  const { messages, locale } = useLocale();
+  const { messages } = useLocale();
 
-  return (key: string, values?: Record<string, string | number>) => {
+  return (key: string, values?: Record<string, string | number>): string => {
     const fullKey = namespace ? `${namespace}.${key}` : key;
-    const keys = fullKey.split(".");
-    let result: unknown = messages;
-
-    for (const k of keys) {
-      if (result && typeof result === "object" && k in result) {
-        result = (result as Record<string, unknown>)[k];
-      } else {
-        return fullKey;
-      }
-    }
+    const result = resolveKey(messages, fullKey);
 
     if (typeof result !== "string") {
       return fullKey;
@@ -93,6 +97,19 @@ export function useTranslations(namespace?: string) {
     }
 
     return result;
+  };
+}
+
+/**
+ * 获取数组类型翻译的 hook
+ */
+export function useTranslationsArray(namespace?: string) {
+  const { messages } = useLocale();
+
+  return (key: string): string[] => {
+    const fullKey = namespace ? `${namespace}.${key}` : key;
+    const result = resolveKey(messages, fullKey);
+    return Array.isArray(result) ? (result as string[]) : [];
   };
 }
 

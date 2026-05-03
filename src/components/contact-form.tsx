@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { trackEvent } from "@/lib/tracking";
+import { useTranslations } from "@/lib/locale";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
 export function ContactForm() {
+  const t = useTranslations("contact");
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
   const [topic, setTopic] = useState<"presale" | "aftersale" | "collab">("presale");
@@ -16,9 +18,9 @@ export function ContactForm() {
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
-    if (!name.trim()) return setError("请填写称呼");
-    if (!contact.trim()) return setError("请填写联系方式（邮箱 / 微信 / 电话）");
-    if (message.trim().length < 5) return setError("问题描述不少于 5 个字");
+    if (!name.trim()) return setError(t("nameRequired"));
+    if (!contact.trim()) return setError(t("contactRequired"));
+    if (message.trim().length < 5) return setError(t("messageMinLength"));
 
     setStatus("submitting");
     try {
@@ -34,21 +36,21 @@ export function ContactForm() {
       setMessage("");
     } catch {
       setStatus("error");
-      setError("提交失败，请稍后再试");
+      setError(t("submitFailed"));
     }
   }
 
   if (status === "success") {
     return (
       <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-sm text-emerald-800">
-        <p className="font-semibold">提交成功</p>
-        <p className="mt-1">我们会在工作时间（09:00–21:00）尽快联系你。如果紧急请直接添加微信 YRC-Global。</p>
+        <p className="font-semibold">{t("submitSuccess")}</p>
+        <p className="mt-1">{t("submitSuccessDesc")}</p>
         <button
           type="button"
           onClick={() => setStatus("idle")}
           className="mt-3 rounded-full border border-emerald-300 px-3 py-1 text-xs font-medium text-emerald-800 hover:bg-white"
         >
-          再问一个
+          {t("askAnother")}
         </button>
       </div>
     );
@@ -57,32 +59,32 @@ export function ContactForm() {
   return (
     <form onSubmit={onSubmit} className="space-y-4 rounded-2xl border border-zinc-200 bg-white p-5">
       <div className="grid gap-4 sm:grid-cols-2">
-        <Field label="称呼">
+        <Field label={t("name")}>
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
             className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm outline-none focus:border-amber-500"
-            placeholder="如：小林"
+            placeholder={t("namePlaceholder")}
           />
         </Field>
-        <Field label="联系方式">
+        <Field label={t("contactInfo")}>
           <input
             value={contact}
             onChange={(e) => setContact(e.target.value)}
             required
             className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm outline-none focus:border-amber-500"
-            placeholder="邮箱 / 微信号 / 电话"
+            placeholder={t("contactPlaceholder")}
           />
         </Field>
       </div>
 
-      <Field label="咨询类型">
+      <Field label={t("inquiryType")}>
         <div className="flex flex-wrap gap-2 text-sm">
           {[
-            { key: "presale", label: "售前选品" },
-            { key: "aftersale", label: "售后与退换" },
-            { key: "collab", label: "合作 / 定制" },
+            { key: "presale", label: t("presale") },
+            { key: "aftersale", label: t("aftersale") },
+            { key: "collab", label: t("collab") },
           ].map((opt) => (
             <button
               key={opt.key}
@@ -100,14 +102,14 @@ export function ContactForm() {
         </div>
       </Field>
 
-      <Field label="问题描述">
+      <Field label={t("problemDescription")}>
         <textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           rows={5}
           required
           className="w-full resize-y rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm outline-none focus:border-amber-500"
-          placeholder="简要描述你的问题或预算 / 用途，越具体越快被处理"
+          placeholder={t("messagePlaceholder")}
         />
       </Field>
 
@@ -115,14 +117,14 @@ export function ContactForm() {
 
       <div className="flex items-center justify-between gap-3">
         <p className="text-xs text-zinc-500">
-          提交即表示你同意我们仅将此信息用于回复本次咨询。我们不会向第三方分享。
+          {t("privacyNotice")}
         </p>
         <button
           type="submit"
           disabled={status === "submitting"}
           className="rounded-full bg-amber-600 px-4 py-2 text-sm font-medium text-white hover:bg-amber-700 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {status === "submitting" ? "提交中…" : "提交咨询"}
+          {status === "submitting" ? t("submitting") : t("submitInquiry")}
         </button>
       </div>
     </form>

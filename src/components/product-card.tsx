@@ -1,14 +1,22 @@
+"use client";
+
 import Image from "next/image";
-import { categoryLabel, meaningLabel, Product } from "@/lib/site-data";
+import { categoryLabel, getProductField, meaningLabel, Product } from "@/lib/site-data";
 import { TrackLink } from "@/components/track-link";
 import { FavoriteButton } from "@/components/favorite-button";
 import { AddToCartButton } from "@/components/add-to-cart-button";
+import { useTranslations, useLocale } from "@/lib/locale";
 
 type ProductCardProps = {
   product: Product;
 };
 
 export function ProductCard({ product }: ProductCardProps) {
+  const t = useTranslations("shop");
+  const tProduct = useTranslations("product");
+  const { locale } = useLocale();
+  const name = getProductField(product, "name", locale) as string;
+  const tagline = getProductField(product, "tagline", locale) as string;
   const hasGlb = product.preview3dMode === "glb" && Boolean(product.modelGlb);
 
   return (
@@ -16,7 +24,7 @@ export function ProductCard({ product }: ProductCardProps) {
       <div className="relative h-52 bg-zinc-100">
         <Image
           src={product.image}
-          alt={product.name}
+          alt={name}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 33vw"
@@ -31,11 +39,11 @@ export function ProductCard({ product }: ProductCardProps) {
       <div className="flex flex-1 flex-col gap-2 p-4">
         <div className="flex items-center justify-between gap-2 text-xs text-zinc-500">
           <span>{product.folderId}</span>
-          <span className="rounded-full bg-zinc-100 px-2 py-0.5">{categoryLabel[product.category]}</span>
+          <span className="rounded-full bg-zinc-100 px-2 py-0.5">{t(categoryLabel[product.category])}</span>
         </div>
-        <h3 className="text-lg font-semibold text-zinc-950">{product.name}</h3>
-        <p className="line-clamp-2 text-sm text-zinc-600">{product.tagline}</p>
-        <p className="text-[11px] text-zinc-500">寓意：{meaningLabel[product.meaning]}</p>
+        <h3 className="text-lg font-semibold text-zinc-950">{name}</h3>
+        <p className="line-clamp-2 text-sm text-zinc-600">{tagline}</p>
+        <p className="text-[11px] text-zinc-500">{tProduct("meaning")}：{t(meaningLabel[product.meaning])}</p>
         <p className="mt-auto text-base font-semibold text-zinc-900">¥{product.priceCny}</p>
         <div className="flex gap-2">
           <TrackLink
@@ -44,7 +52,7 @@ export function ProductCard({ product }: ProductCardProps) {
             eventName="view_product_detail"
             eventPayload={{ product_slug: product.slug }}
           >
-            查看详情
+            {t("viewDetail")}
           </TrackLink>
           <AddToCartButton product={product} />
         </div>

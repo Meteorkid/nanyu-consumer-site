@@ -1,6 +1,7 @@
 "use client";
 
 import { createElement, useEffect, useState } from "react";
+import { useTranslations } from "@/lib/locale";
 
 type Product3dViewerProps = {
   src: string;
@@ -17,6 +18,7 @@ const defaultFrame = "h-[280px] w-full rounded-xl bg-zinc-950";
  * Poster uses the product photo until high-res textures / mesh ship.
  */
 export function Product3dViewer({ src, poster, alt, className }: Product3dViewerProps) {
+  const t = useTranslations("product");
   const frame = className?.trim() ? className : defaultFrame;
   const [ready, setReady] = useState(false);
 
@@ -33,7 +35,7 @@ export function Product3dViewer({ src, poster, alt, className }: Product3dViewer
   if (!ready) {
     return (
       <div className={`flex items-center justify-center text-sm text-zinc-500 ${frame}`} aria-busy>
-        加载 3D 查看器…
+        {t("loading3d")}
       </div>
     );
   }

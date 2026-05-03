@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState, useTransition } from "react";
 import { meaningOptions, priceBands, scenarios, sortOptions } from "@/lib/site-data";
 import { parseShopSearchParams, serializeShopParams, type ShopParams } from "@/lib/catalog-filters";
 import { trackEvent } from "@/lib/tracking";
+import { useTranslations } from "@/lib/locale";
 
 type ShopFiltersProps = {
   total: number;
@@ -12,6 +13,8 @@ type ShopFiltersProps = {
 };
 
 export function ShopFilters({ total, filteredCount }: ShopFiltersProps) {
+  const t = useTranslations("shop");
+  const tCommon = useTranslations("common");
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -86,14 +89,14 @@ export function ShopFilters({ total, filteredCount }: ShopFiltersProps) {
       aria-busy={isPending}
     >
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 className="text-lg font-semibold text-zinc-900">筛选维度</h2>
+        <h2 className="text-lg font-semibold text-zinc-900">{t("filterDimensions")}</h2>
         <p className="text-xs text-zinc-500">
-          共 {total} 款，筛选后 <span className="font-semibold text-zinc-800">{filteredCount}</span> 款
+          {t("totalProducts")} {total} {t("productCount")}，{t("filteredProducts")} <span className="font-semibold text-zinc-800">{filteredCount}</span> {t("productCount")}
         </p>
       </div>
 
       <div className="mt-4 space-y-3 text-sm">
-        <Row label="场景">
+        <Row label={t("scenario")}>
           {scenarios.map((item) => (
             <button
               key={item.key}
@@ -101,12 +104,12 @@ export function ShopFilters({ total, filteredCount }: ShopFiltersProps) {
               onClick={() => toggle("scenario", item.key)}
               className={chip(current.scenario === item.key)}
             >
-              {item.label}
+              {t(item.labelKey)}
             </button>
           ))}
         </Row>
 
-        <Row label="价格带">
+        <Row label={t("priceRange")}>
           {priceBands.map((band) => (
             <button
               key={band.key}
@@ -119,7 +122,7 @@ export function ShopFilters({ total, filteredCount }: ShopFiltersProps) {
           ))}
         </Row>
 
-        <Row label="寓意">
+        <Row label={t("meaningLabel")}>
           {meaningOptions.map((item) => (
             <button
               key={item.key}
@@ -127,18 +130,18 @@ export function ShopFilters({ total, filteredCount }: ShopFiltersProps) {
               onClick={() => toggle("meaning", item.key)}
               className={chip(current.meaning === item.key)}
             >
-              {item.label}
+              {t(item.labelKey)}
             </button>
           ))}
         </Row>
 
-        <Row label="3D 可查看">
+        <Row label={t("has3dLabel")}>
           <button
             type="button"
             onClick={() => setThreeD(!current.threeD)}
             className={chip(current.threeD)}
           >
-            仅 GLB 可旋转款
+            {t("onlyGlb")}
           </button>
         </Row>
       </div>
@@ -146,27 +149,27 @@ export function ShopFilters({ total, filteredCount }: ShopFiltersProps) {
       <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-zinc-100 pt-4">
         <form onSubmit={onSubmitSearch} className="flex min-w-[240px] flex-1 items-center gap-2">
           <label htmlFor="shop-q" className="text-xs text-zinc-500">
-            搜索
+            {t("searchLabel")}
           </label>
           <input
             id="shop-q"
             type="search"
             value={keyword}
             onChange={(e) => setKeyword(e.target.value)}
-            placeholder="商品名 / 产品编号"
+            placeholder={t("searchPlaceholder")}
             className="flex-1 rounded-full border border-zinc-300 bg-white px-3 py-1.5 text-sm text-zinc-800 outline-none placeholder:text-zinc-400 focus:border-amber-500"
           />
           <button
             type="submit"
             className="rounded-full border border-amber-600 bg-white px-3 py-1.5 text-sm font-medium text-amber-700 hover:bg-amber-50"
           >
-            搜索
+            {t("searchLabel")}
           </button>
         </form>
 
         <div className="flex items-center gap-2">
           <label htmlFor="shop-sort" className="text-xs text-zinc-500">
-            排序
+            {t("sortLabel")}
           </label>
           <select
             id="shop-sort"
@@ -176,7 +179,7 @@ export function ShopFilters({ total, filteredCount }: ShopFiltersProps) {
           >
             {sortOptions.map((o) => (
               <option key={o.key} value={o.key}>
-                {o.label}
+                {t(o.labelKey)}
               </option>
             ))}
           </select>
@@ -188,7 +191,7 @@ export function ShopFilters({ total, filteredCount }: ShopFiltersProps) {
             onClick={clearAll}
             className="ml-auto text-xs font-medium text-amber-700 hover:text-amber-800"
           >
-            重置全部
+            {t("resetAll")}
           </button>
         ) : null}
       </div>

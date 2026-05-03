@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useTranslations } from "@/lib/locale";
 
 export type BreadcrumbItem = {
   href?: string;
@@ -6,8 +9,10 @@ export type BreadcrumbItem = {
 };
 
 export function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
+  const t = useTranslations("common");
+
   return (
-    <nav aria-label="面包屑" className="text-xs text-zinc-500">
+    <nav aria-label={t("breadcrumb")} className="text-xs text-zinc-500">
       <ol className="flex flex-wrap items-center gap-1">
         {items.map((item, idx) => {
           const last = idx === items.length - 1;

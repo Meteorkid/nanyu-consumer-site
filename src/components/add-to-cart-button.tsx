@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useCartActions } from "@/lib/cart";
 import type { Product } from "@/lib/site-data";
+import { useTranslations } from "@/lib/locale";
 
 type AddToCartButtonProps = {
   product: Product;
@@ -10,6 +11,7 @@ type AddToCartButtonProps = {
 
 export function AddToCartButton({ product }: AddToCartButtonProps) {
   const { addItem } = useCartActions();
+  const t = useTranslations("shop");
   const [added, setAdded] = useState(false);
 
   const handleAdd = () => {
@@ -24,7 +26,7 @@ export function AddToCartButton({ product }: AddToCartButtonProps) {
       className="inline-flex items-center justify-center rounded-full border border-amber-600 px-4 py-2 text-sm font-medium text-amber-700 transition-colors hover:bg-amber-50 disabled:opacity-60"
       disabled={added}
     >
-      {added ? "已加入" : "加入购物车"}
+      {added ? t("added") : t("addToCart")}
     </button>
   );
 }

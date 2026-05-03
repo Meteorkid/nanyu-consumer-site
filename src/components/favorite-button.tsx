@@ -2,6 +2,7 @@
 
 import { useFavorites, useHydrated } from "@/lib/use-favorites";
 import { trackEvent } from "@/lib/tracking";
+import { useTranslations } from "@/lib/locale";
 
 type FavoriteButtonProps = {
   slug: string;
@@ -14,6 +15,7 @@ type FavoriteButtonProps = {
 export function FavoriteButton({ slug, size = "sm", className = "", showLabel = true }: FavoriteButtonProps) {
   const { isFavorite, toggle } = useFavorites();
   const hydrated = useHydrated();
+  const t = useTranslations("common");
   const active = hydrated && isFavorite(slug);
 
   const base =
@@ -27,7 +29,7 @@ export function FavoriteButton({ slug, size = "sm", className = "", showLabel = 
     <button
       type="button"
       aria-pressed={active}
-      aria-label={active ? "取消收藏" : "加入收藏"}
+      aria-label={active ? t("removeFromFavorites") : t("addToFavorites")}
       onClick={() => {
         toggle(slug);
         trackEvent("toggle_favorite", { product_slug: slug, state: active ? "off" : "on" });
@@ -37,7 +39,7 @@ export function FavoriteButton({ slug, size = "sm", className = "", showLabel = 
       <span aria-hidden className={active ? "text-amber-600" : ""}>
         {active ? "★" : "☆"}
       </span>
-      {showLabel ? <span>{active ? "已收藏" : "收藏"}</span> : null}
+      {showLabel ? <span>{active ? t("favorited") : t("favorites")}</span> : null}
     </button>
   );
 }

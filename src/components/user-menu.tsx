@@ -3,9 +3,11 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useAuth } from "@/lib/auth";
+import { useTranslations } from "@/lib/locale";
 
 export function UserMenu() {
   const { user } = useAuth();
+  const t = useTranslations("common");
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -28,7 +30,7 @@ export function UserMenu() {
         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
         </svg>
-        登录
+        {t("login")}
       </Link>
     );
   }
@@ -57,21 +59,21 @@ export function UserMenu() {
               onClick={() => setOpen(false)}
               className="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-50"
             >
-              个人中心
+              {t("profile")}
             </Link>
             <Link
               href="/orders"
               onClick={() => setOpen(false)}
               className="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-50"
             >
-              我的订单
+              {t("orders")}
             </Link>
             <Link
               href="/favorites"
               onClick={() => setOpen(false)}
               className="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-50"
             >
-              我的收藏
+              {t("favorites")}
             </Link>
           </div>
         </div>
