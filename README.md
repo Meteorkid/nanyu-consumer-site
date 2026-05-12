@@ -1,3 +1,5 @@
+[![License: AGPL v3](https://img.shields.io/badge/license-AGPL%20v3-red)](./LICENSE)
+
 # 玉汝于成消费者入口（MVP）
 
 面向消费者的品牌官网，围绕“去购买 + 看内容”两大入口搭建，当前版本支持图片化商品展示、内容种草、3D展示占位、售后保障与基础埋点。
