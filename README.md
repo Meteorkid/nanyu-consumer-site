@@ -15,6 +15,12 @@
 - **商品详情**：`/product/[slug]` 动态路由
 - **埋点上报**：`dataLayer` 事件上报，可对接 GA4
 
+## 截图
+
+### 首页
+
+![玉汝于成首页](docs/screenshots/nanyu-homepage.png)
+
 ## 技术栈
 
 | 层 | 技术 |
